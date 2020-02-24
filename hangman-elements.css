@@ -1,0 +1,96 @@
+.hangman-elements {
+    height: 90%;
+    width: 90%;
+/*    background: orange;*/
+    margin: auto; /* centers elemets only when its parent is flexed */
+    position: relative;
+    left: -3000px;
+}
+/* gallows items */
+.hangman-elements .gallows-stick-vertical {
+    position: absolute;
+    height: 60%;
+    width: 3%;
+    background: black;
+    bottom: 25%;
+    left: 30%;
+}
+.hangman-elements .gallows-stick-horizontal-down {
+    position: absolute;
+    height: 3%;
+    width: 28%;
+    background: black;
+    bottom: 22%;
+    left: 18%;
+}
+.hangman-elements .gallows-stick-horizontal-up {
+    position: absolute;
+    height: 3%;
+    width: 20%;
+    background: black;
+    bottom: 83%;
+    left: 30%;
+}
+.hangman-elements .gallows-rope {
+    position: absolute;
+    height: 12%;
+    width: 1%;
+    background: black;
+    bottom: 72%;
+    left: 48%;
+}
+/* hangman tems */
+.hangman-elements .hangman-torso {
+    position: absolute;
+    height: 16%;
+    width: 6%;
+    background: black;
+    bottom: 48%;
+    left: 45.5%;
+}
+.hangman-elements .hangman-left-leg {
+    position: absolute;
+    height: 13.5%;
+    width: 1.7%;
+    background: black;
+    bottom: 34.5%;
+    left: 45.6%;
+}
+.hangman-elements .hangman-right-leg {
+    position: absolute;
+    height: 13.5%;
+    width: 1.7%;
+    background: black;
+    bottom: 34.5%;
+    left: 49.8%;
+}
+.hangman-elements .hangman-left-arm {
+    position: absolute;
+    height: 12%;
+    width: 1%;
+    background: black;
+    bottom: 52.3%;
+    left: 43.9%;
+    transform: rotate(20deg);
+    border-radius: 50% 0 0 0;
+}
+.hangman-elements .hangman-right-arm {
+    position: absolute;
+    height: 12%;
+    width: 1%;
+    background: black;
+    bottom: 52.3%;
+    left: 52.3%;
+    transform: rotate(-20deg);
+    border-radius: 0 50% 0 0;
+}
+.hangman-elements .hangman-head {
+    position: absolute;
+    border-radius: 100%;
+    height: 8%;
+    width: 8%;
+    background: none;
+    border: 4px solid black;
+    bottom: 64%;
+    left: 44.5%;
+}
