@@ -1,0 +1,240 @@
+/* global settings */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Catamaran', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    background: url(img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container {
+    max-width: 1300px; /* or 90% */
+    height: 100%;
+    margin: 0 auto;
+/*    background: pink;*/
+}
+button {
+    opacity: 0.7;
+}
+button:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+/* navbar */
+.navbar {
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.navbar .main-title {
+    color: #eee;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: auto;
+}
+/* main */
+.container .main {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+    height: calc(100% - 100px);
+}
+
+/* main-left */
+.container .main-left {
+/*    background: yellow;*/
+    height: 100%;
+    display: flex;
+}
+        /*    the rest of this part is styled in hangman-elements.css    */
+/* main-right */
+.container .main-right {
+/*    background: green;*/
+    height: 100%;
+}
+/* main-right buttons */
+.container .main-right .main-right-btns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 50px;
+}
+.container .main-right .main-right-btns div {
+    justify-self: center;
+    align-self: center;
+}
+.container .main-right .main-right-btns button {
+    padding: 8px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 50px;
+}
+.container .main-right .main-right-btns .hints-left {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.2rem;
+}
+.container .main-right .main-right-btns .hints-heart {
+    color: red;
+}
+/* main-right word-to-guess */
+.container .main-right .main-right-word {
+    height: calc(40% - 80px); /*30px from navbar + 50px from .main-right-btns*/
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .main-right .main-right-word .word-to-guess {
+    display: grid;
+ /*   grid-template-columns: defined in JS */
+    grid-gap: 5px;
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 6px;
+
+}
+.container .main-right .main-right-word .word-to-guess .word-letters {
+    background: none;
+    font-size: 1.8rem;
+    width: 35px;
+    height: 40px;
+    padding: 3px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 5px solid black;
+    text-align: center;
+    text-transform: uppercase;
+}
+.main-right-placeForKeyBoard {
+    width: 100%;
+    height: 60%;
+    display: grid;
+}
+.container .main-right .main-right-keyboard {
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+    align-content: center;
+    grid-gap: 1rem;
+}
+.container .main-right .main-right-keyboard .last1 {
+    grid-column: 4/5
+}
+.container .main-right .main-right-keyboard .last2 {
+    grid-column: 5/6
+}
+.container .main-right .main-right-keyboard button{
+    background: red;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: none;
+}
+
+/* win or lose */
+.winner {
+    top: -6000vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.winner .win-title {
+    position: relative;
+    font-size: 4rem;
+    color: #eee;
+    text-align: center;
+    text-transform: uppercase;
+}
+.looser {
+    top: -6000vh;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.looser .lose-title {
+    position: relative;
+    font-size: 4rem;
+    color: #eee;
+    text-align: center;
+    text-transform: uppercase;
+}
+.next-word-btn {
+    top: 2rem;
+    position: relative;
+    font-size: 1.6rem;
+    color: #111;
+    padding: 0.7rem;
+    border-radius: 50px;
+}
+
+@media (max-width: 765px) {
+    .container {
+        width: 90%;
+    }
+    .navbar {
+        height: 50px;
+    }
+    .navbar .main-title {
+        font-size: 1.4rem;
+    }
+    .container .main-right .main-right-btns button {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+    .container .main-right .main-right-word .word-to-guess .word-letters {
+        width: 26px;
+        font-size: 1rem;
+    }
+    .container .main-right .main-right-word .word-to-guess {
+        grid-gap: 1px;
+    }
+    .container .main-right .main-right-keyboard{
+        display: none;
+    }
+    .container .main-right .main-right-btns .hints-heart {
+        font-size: 2rem;
+    }
+    .container .main-right .main-right-word{
+        margin-top: 8%;
+    }
+    .container .main-left {
+        width: 65%;
+        margin: auto
+    }
+    .container .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40% 40%;
+        width: 100%;
+    }
+
+}
