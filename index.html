@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="global-style.css">
+    <link rel="stylesheet" href="hangman-elements.css">
+    <title>HangMan</title>
+</head>
+
+<body>
+        <nav class="navbar">
+            <h1 class="main-title">HangMan</h1>
+        </nav> <!-- navbar ends -->
+    <div class="container">
+        <section class="main">
+
+            <section class="main-left">
+
+                <div class="hangman-elements">
+                    <div class="hanging-tree gallows-stick-vertical"></div>
+                    <div class="hanging-tree gallows-stick-horizontal-down"></div>
+                    <div class="hanging-tree gallows-stick-horizontal-up"></div>
+                    <div class="hanging-tree gallows-rope"></div>
+
+                    <div class="hanging-tree hangman-head"></div>
+                    <div class="hanging-tree hangman-torso"></div>
+                    <div class="hanging-tree hangman-left-arm"></div>
+                    <div class="hanging-tree hangman-right-arm"></div>
+                    <div class="hanging-tree hangman-left-leg"></div>
+                    <div class="hanging-tree hangman-right-leg"></div>
+
+                </div>
+
+
+
+            </section> <!-- main-left ends -->
+
+            <section class="main-right">
+
+                <div class="main-right-btns">
+                    <div>
+                        <button class="draw-word-btn">Draw another word!</button>
+                    </div>
+                    <div>
+                        <button class="hint">Hint</button>
+                    </div>
+                    <div class="hearts">
+                        <div class="hints-left"></div>
+                    </div>
+                </div>
+
+                <div class="main-right-word">
+
+                    <div class="word-to-guess">
+                        <!--                    js will do job         here-->
+                    </div>
+
+                </div>
+                <div class="main-right-placeForKeyBoard">
+                    <div class="main-right-keyboard">
+                        <button class="keyboard-alphabet">A</button>
+                        <button class="keyboard-alphabet">B</button>
+                        <button class="keyboard-alphabet">C</button>
+                        <button class="keyboard-alphabet">D</button>
+                        <button class="keyboard-alphabet">E</button>
+                        <button class="keyboard-alphabet">F</button>
+                        <button class="keyboard-alphabet">G</button>
+                        <button class="keyboard-alphabet">H</button>
+                        <button class="keyboard-alphabet">I</button>
+                        <button class="keyboard-alphabet">J</button>
+                        <button class="keyboard-alphabet">K</button>
+                        <button class="keyboard-alphabet">L</button>
+                        <button class="keyboard-alphabet">M</button>
+                        <button class="keyboard-alphabet">N</button>
+                        <button class="keyboard-alphabet">O</button>
+                        <button class="keyboard-alphabet">P</button>
+                        <button class="keyboard-alphabet">Q</button>
+                        <button class="keyboard-alphabet">R</button>
+                        <button class="keyboard-alphabet">S</button>
+                        <button class="keyboard-alphabet">T</button>
+                        <button class="keyboard-alphabet">U</button>
+                        <button class="keyboard-alphabet">V</button>
+                        <button class="keyboard-alphabet">W</button>
+                        <button class="keyboard-alphabet">X</button>
+                        <button class="keyboard-alphabet last1">Y</button>
+                        <button class="keyboard-alphabet last2">Z</button>
+                    </div>
+                </div>
+            </section> <!-- main-right ends -->
+        </section> <!-- main ends -->
+
+    </div> <!-- container ends -->
+
+    <div class="winner">
+        <h3 class="win-title">You Win!</h3>
+        <button class="next-word-btn">Next word!</button>
+    </div>
+
+    <div class="looser">
+        <h3 class="lose-title">You lost!</h3>
+        <button class="next-word-btn">Try again!</button>
+    </div>
+
+    <script src="listOfWords.js"></script>
+    <script src="allMethods.js"></script>
+    <script src="main.js"></script>
+
+</body></html>
