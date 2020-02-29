@@ -9,5 +9,5 @@ Technologies in scope:
 * CSS3
 * Javascript (plain VaniliaJS)
 
-You can try out this game under the below URL:
+You can try out this game under -> 
 https://jankee1.github.io/Hangman/
