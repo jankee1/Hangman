@@ -180,9 +180,24 @@ button:hover {
     justify-content: center;
     align-items: center;
 }
-.looser .lose-title {
+.looser .lose-title1 {
     position: relative;
     font-size: 4rem;
+    color: #eee;
+    text-align: center;
+    text-transform: uppercase;
+}
+.looser .lose-title2 {
+    position: relative;
+    font-size: 2rem;
+    color: #eee;
+    text-align: center;
+    text-transform: uppercase;
+}
+.looser .show-word {
+    padding: 1.9rem 0;
+    position: relative;
+    font-size: 1.8rem;
     color: #eee;
     text-align: center;
     text-transform: uppercase;
