@@ -9,7 +9,7 @@ This project is not done yet - making it more mobile-friendly application and ad
 Technologies in scope:
 * HTML5
 * CSS3
-* Javascript (plain VaniliaJS)
+* Javascript (plain VanillaJS)
 
 You can try out this game under -> 
 https://jankee1.github.io/Hangman/
